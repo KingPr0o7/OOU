@@ -1,21 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #ffffff;
 }
 
+*:focus-visible {
+  outline: 2px solid #FFFFFF;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+}
+
+*:focus-visible {
+  outline: 2px solid #FFFFFF;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #navbar {
   display: flex;
   flex-direction: row;
@@ -23,6 +59,13 @@
   align-items: center;
   height: 100px;
   padding: 20px 10%;
+  top: 0;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 #navbar > #navbar-image {
   height: 80px;
@@ -39,18 +82,113 @@
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
-  font-weight: 600;
 }
-#navbar > #navbar-button {
-  border-radius: 16px;
-  padding: 15px;
-  background: #d3d3d3;
-  color: black;
-  border: none;
-  text-transform: uppercase;
+#navbar > #navbar-links-left > .navbar-link:hover, #navbar > #navbar-links-left > .navbar-link:focus, #navbar #navbar-links-right > .navbar-link:hover, #navbar #navbar-links-right > .navbar-link:focus {
+  color: #EF3E33;
 }
 
 html, body {
   background: #222222;
   color: white;
+}
+
+#oou-display {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  height: 100%;
+  animation: shrink 1.3s ease-in-out 9s forwards;
+}
+#oou-display > #oou-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(2rem, 10vw, 5rem);
+  gap: 20px;
+  font-weight: 600;
+}
+#oou-display > #oou-text > * {
+  opacity: 0;
+}
+#oou-display > #oou-text > #oou-text-1 {
+  animation: fadeIn 1.3s ease-in-out 2s forwards;
+  color: #3eee45;
+}
+#oou-display > #oou-text > #oou-text-2 {
+  animation: fadeIn 1.3s ease-in-out 3s forwards;
+  color: white;
+}
+#oou-display > #oou-text > #oou-text-3 {
+  animation: fadeIn 1.3s ease-in-out 4s forwards;
+  color: #eb413c;
+}
+#oou-display > #oou-desc {
+  font-size: clamp(1rem, 6vw, 3rem);
+  opacity: 0;
+  animation: fadeIn 1.3s ease-in-out 7s forwards;
+}
+
+#oou-purpose {
+  width: 50%;
+  height: calc(100vh - 100px);
+  position: absolute;
+  font-size: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  left: 50%;
+  top: 100px;
+  padding: 25px;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-in-out 10s forwards;
+}
+#oou-purpose > .oou-purpose-text > #technoblade-rank {
+  background-color: #fe5afc;
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+#oou-purpose > .oou-purpose-text > #faceplate-rank {
+  background-color: #fb575b;
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+#oou-purpose > .oou-purpose-text > #sarcoma-color {
+  background-color: #f0b65c;
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#people-oou {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 50%;
+  }
 }/*# sourceMappingURL=index.css.map */

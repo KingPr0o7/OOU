@@ -4,6 +4,14 @@
     @include flex(row, space-evenly, center)
     height: 100px
     padding: 20px 10%
+    top: 0
+    z-index: 3
+    position: fixed
+    width: 100%
+    background: rgba(0, 0, 0, 0.3)
+    backdrop-filter: blur(30px)
+    -webkit-backdrop-filter: blur(30px)
+
 
     & > #navbar-image
         height: 80px
@@ -17,12 +25,6 @@
             text-decoration: none
             font-size: 20px
             text-transform: uppercase
-            font-weight: 600
 
-    & > #navbar-button
-        border-radius: 16px
-        padding: 15px
-        background: #d3d3d3
-        color: black
-        border: none
-        text-transform: uppercase
+            &:hover, &:focus
+                color: #EF3E33

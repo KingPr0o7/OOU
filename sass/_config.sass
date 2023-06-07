@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap')
 
 
 //
@@ -11,12 +11,29 @@
 	justify-content: $justify
 	align-items: $align
 
+@mixin color-text($color)
+	background-color: $color
+	background-size: 100%
+	background-repeat: repeat
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	-moz-background-clip: text
+	-moz-text-fill-color: transparent
+
 //
 // Text Colors / Fonts / Link Colors
 //
 
 $primary-text-color: #ffffff
-$font: 'Source Sans Pro', sans-serif
+$font: 'Rubik', sans-serif
+
+//
+// Elements
+//
+
+html, body 
+	height: 100%
+	width: 100%
 
 *
 	box-sizing: border-box
@@ -24,3 +41,17 @@ $font: 'Source Sans Pro', sans-serif
 	padding: 0
 	font-family: $font
 	color: $primary-text-color
+
+*:focus-visible
+	outline: 2px solid #FFFFFF
+	border-radius: 8px
+
+//
+// Animations
+//
+
+@keyframes fadeIn
+	0% 
+		opacity: 0
+	100% 
+		opacity: 1

@@ -29,7 +29,7 @@
     <!-- Other -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
-
+    <script type="module" crossorigin src="index.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -41,8 +41,27 @@
         <img id='navbar-image' src="/images/branding/oou-logo.png" alt="OOU Logo" title="One Of Us Logo">
         <div id="navbar-links-right">
             <a class="navbar-link" href="#">Team</a>
-            <a class="navbar-link" href="#">Contact</a>
+            <a class="navbar-link" href="#">Support</a>
         </div>
+    </div>
+    <div id='oou-page'>
+        <div id="oou-display">
+            <div id="oou-text">
+                <span id="oou-text-1">ONE</span> 
+                <span id="oou-text-2">OF</span> 
+                <span id="oou-text-3">US</span>
+            </div>
+            <div id="oou-desc">Global Foundation</div>
+        </div>
+
+        <div id="oou-purpose">
+            <p class="oou-purpose-text">The <span id='sarcoma-color'>One of Us Global Foundation</span> created in memory of Alexander "<span id='technoblade-rank'>Technoblade</span>"; specializes in finding people's voices and dreams. After the community lost Technoblade, his father, known as "Mr. Technodad" or "<span id="faceplate-rank">MrFaceplate</span>" in Minecraft, decided to uphold his son's community by connecting with others, even with the tragic loss. Now, he and his wife, Stacey Street, partnered with the Sarcoma Foundation launching the <span id='sarcoma-color'>One of Us Global Foundation</span>. To view more of their work and goals, view their website:</p>
+            <br>
+            <p class="oou-purpose-text">oneofusglobal.org</p>
+        </div>
+        <video id="people-oou" autoplay muted>
+            <source src="/videos/technoblade-never-dies.mp4" type="video/mp4">
+        </video>
     </div>
 </body>
 </html>
